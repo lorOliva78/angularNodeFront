@@ -1,0 +1,14 @@
+
+
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">{{ graficCardDetails.name }} Details</h1>
+    <p class="lead">Manufacturer by {{ graficCardDetails.manufacturer }}</p>
+    <hr class="my-4">
+    <p>Price: {{ graficCardDetails.price | currency }} </p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" [routerLink]="['/graphics-cards']" role="button">Back</a>
+    </p>
+  </div>
+</div>
+

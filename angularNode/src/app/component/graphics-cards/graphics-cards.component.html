@@ -1,0 +1,29 @@
+
+<div *ngFor='let graphic of graphicsCards; let id = index' > 
+
+    <div style="margin: 12px;float:left; position: relative;">
+        <div class="card"  style="width: 18rem; ">
+            <img src="../../../assets/card.jpg" class="card-img-top" alt="..."> 
+            <div class="card-body">
+              <h5 class="card-title">{{graphic.name}}</h5>
+              <p class="card-text">MODEL: {{graphic.model}}</p>
+              <a [routerLink]="['/details',id]" (click)="emitirIndice(id)" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    
+    </div>
+    
+</div>
+<ngx-spinner type="pacman"></ngx-spinner>
+<div style="position:absolute; left:0px; right:0px; bottom:0px; height:50px;  z-index:0;" >
+    <mat-paginator [length]="graphicsCards.length"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
+
+</div>
+
+
+
+
+  
